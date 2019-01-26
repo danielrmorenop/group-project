@@ -33,15 +33,17 @@ MVP:
         app.js - when clicking on another genre->
             another row is dynamically created and inserted at the top, with 3 new movie suggestions 
 
-        you can click on one of the suggestions ->
+       index.html - when you can click on a movie suggestions ->
             -upon clicking on the movie you want, a quick-view popup appears with more info etc.
             -Information is diplayed under the movie poster image, and the image becomes a link to a youtube trailer / embeds a trailer from youtube.
 
-        there's a button to add a particular movie to "your list"
+        index.html - there's a button to add a particular movie to "your list"
+        app.js - there's a button to add a particular movie to "your list"
 
 
         firebase!
         don't do user authentication, instead local storage and user key/unique id
+        update: we may be using user auth...
 
 
     
