@@ -4,34 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <title>Movie Suggester</title>
 </head>
+
 <body>
-    <!--
-        .
-        on page load have a popup where you need to register a key/code to save your list
-        
-        https://introjs.com/ - have a step-by-step guide on how to use the website.
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar w/ text</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+            </div>
+            </nav>
+              
 
-        have buttons for genres at the top
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 text-center">Movie Suggester</h1>
+            <p class="lead text-center">Find and store your next favorite Movie!</p>
+        </div>
 
-        when you click on a particular gengre->
-            a row is created below with 3 movie posters/images diaplaying
+    </div>
+    <div id="genreButtonsView" data-selection class="container"></div>   
+    <div class="container">   
+         <div class="row">
+            <div class="col-12 ">
+                <div id="movies-appear-here"></div> 
 
-        when clicking on another genre->
-            another row is dynamically created and inserted at the top, with 3 new movie suggestions 
+                <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
 
-        you can click on one of the suggestions ->
-            -upon clicking on the movie you want, a quick-view popup appears with more info etc.
-            -Information is diplayed under the movie poster image, and the image becomes a link to a youtube trailer / embeds a trailer from youtube.
+                      <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                          </div>
 
-        there's a button to add a particular movie to "your list"
+                          <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="..." alt="Card image cap">
+                                <div class="card-body">
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+            </div>  
+
+            <button type="button" class="btn btn-primary btn-lg" id="resetButton">Reset</button>
 
 
-        firebase!
-        don't do user authentication, instead local storage and user key/unique id
-
-
-    -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/javascript/app.js"></script>
+    
 </body>
 </html>

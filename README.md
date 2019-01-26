@@ -3,6 +3,61 @@ repo for movie suggester group project
 
 <!--
 
+********* Copy and pasted from index.html 
+
+    <!--
+        on page load have a popup where you need to register a key/code to save your list
+        
+        https://introjs.com/ - have a step-by-step guide on how to use the website.
+
+        have buttons for genres at the top
+
+        when you click on a particular gengre->
+            a row is created below with 3 movie posters/images diaplaying
+
+        when clicking on another genre->
+            another row is dynamically created and inserted at the top, with 3 new movie suggestions 
+
+        you can click on one of the suggestions ->
+            -upon clicking on the movie you want, a quick-view popup appears with more info etc.
+            -Information is diplayed under the movie poster image, and the image becomes a link to a youtube trailer / embeds a trailer from youtube.
+
+        there's a button to add a particular movie to "your list"
+
+
+        firebase!
+        don't do user authentication, instead local storage and user key/unique id
+
+
+    
+        .
+        on page load have a popup where you need to register a key/code to save your list
+        
+        https://introjs.com/ - have a step-by-step guide on how to use the website.
+
+        have buttons for genres at the top
+
+        when you click on a particular gengre->
+            a row is created below with 3 movie posters/images diaplaying
+
+        when clicking on another genre->
+            another row is dynamically created and inserted at the top, with 3 new movie suggestions 
+
+        you can click on one of the suggestions ->
+            -upon clicking on the movie you want, a quick-view popup appears with more info etc.
+            -Information is diplayed under the movie poster image, and the image becomes a link to a youtube trailer / embeds a trailer from youtube.
+
+        there's a button to add a particular movie to "your list"
+
+
+        firebase!
+        don't do user authentication, instead local storage and user key/unique id
+
+
+    
+
+********* Git *********
+
 This is a step-by-step guide for when you want to start working on something. (assuming you just turned on your computer)
 
 1)  git checkout master
