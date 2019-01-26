@@ -1,0 +1,9 @@
+.card {
+    float: left;
+}
+
+#resetButton {
+    bottom: 5px;
+    right: 5px;
+}
+
