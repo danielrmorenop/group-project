@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!--Nav-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Navbar w/ text</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,24 +29,36 @@
                 </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <button type="button" class="btn btn-primary" id="signUpButton">Sign up</button>
+                        <button type="button" class="btn btn-primary" id="logInButton">Log in</button>
                     </form>
             </div>
             </nav>
               
-
+<!--Jumobtron-->
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4 text-center">Movie Suggester</h1>
             <p class="lead text-center">Find and store your next favorite Movie!</p>
         </div>
 
+        <form>
+                <div class="form-group">
+                        <div class="container">   
+                                <div class="row">
+                                   <div class="col-3">
+<!--Genre Search-->
+                  <label for="genreInput">Search Genres</label>
+                  <input type="text" class="form-control" id="genreInput" placeholder="What do want to see?">
+                </div>
+        </form>
+<!--Genre Buttons-->
     </div>
     <div id="genreButtonsView" data-selection class="container"></div>   
     <div class="container">   
          <div class="row">
-            <div class="col-12 ">
+            <div class="col-12">
+<!--Movie Cards-->
                 <div id="movies-appear-here"></div> 
 
                 <div class="card" style="width: 18rem;">
@@ -68,7 +81,7 @@
                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
             </div>  
-
+<!--Reset Button-->
             <button type="button" class="btn btn-primary btn-lg" id="resetButton">Reset</button>
 
 
