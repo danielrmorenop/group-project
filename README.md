@@ -2,20 +2,35 @@
 repo for movie suggester group project
 
 <!--
+********* MVP ********* 
+Target audience: Movie watchers of all ages.
 
-********* Copy and pasted from index.html 
+Goal:  Reccomend movies based on genres that users users can save for later.
+
+User stories:
+As a movie-watcher, I want to find and store movies in a list to watch later. 
+
+MVP: 
+- Ability to search through genres and receive reccomendations. 
+
++ Ability to save to a list for later (Login with Firebase). 
++ Play a trailer for the movie reccomendations. 
+
+
+
+********* Copy and pasted from index.html ********* 
 
     <!--
         on page load have a popup where you need to register a key/code to save your list
         
         https://introjs.com/ - have a step-by-step guide on how to use the website.
 
-        have buttons for genres at the top
+        index.html - have buttons for genres at the top
 
-        when you click on a particular gengre->
+       app.js - when you click on a particular gengre->
             a row is created below with 3 movie posters/images diaplaying
 
-        when clicking on another genre->
+        app.js - when clicking on another genre->
             another row is dynamically created and inserted at the top, with 3 new movie suggestions 
 
         you can click on one of the suggestions ->
