@@ -1,6 +1,13 @@
 # group-project
 repo for movie suggester group project
 
+YELP API KEY:
+Client ID
+a7WvYfT2xZR22GFf88mStA
+
+API Key
+uf6J33hR-nMEJqUizsBxREhHXRm03lsphPCh9kPux9B9WqWYivxNeZyHXsNDpjjoQ5kD6dUK142n7RVRB25K14dVwG_Z35_mEBwxuGD-JspMoBQQ68Kjhdc1XO1NXHYx
+
 <!--
 ********* MVP ********* 
 Target audience: Movie watchers of all ages.
