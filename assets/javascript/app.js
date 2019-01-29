@@ -1,12 +1,6 @@
 var genres = [];
 
 //function to display the buttons on the page
-function displayGenreButtons(){
-  
-   
-}
-
-displayGenreButtons();
 
 $('#add-movie').on("click", function(event){
   event.preventDefault();
