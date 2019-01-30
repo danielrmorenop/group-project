@@ -10,4 +10,10 @@
 .carousel-inner {
     width: 50%;
 }
+#add-movie{
+    margin: 15px;
+}
 
+img {
+    margin: 15px;
+}
