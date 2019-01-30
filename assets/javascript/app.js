@@ -13,10 +13,10 @@
 							function(json) {
 							console.log(json);
 							
-									for(var i=0;i<3;i++){
-										if (json.total_results) {
-											$('#movies-appear-here').html(
-												'<h2 class="loading"> We found you your poster.</h2><img id="thePoster" src=' + baseimg +
-														json.results[0].poster_path + ' />');
-													} 
-	})});
+							for(i=0; i<4; i++){
+							if (json.total_results) {
+								var produce = baseimg + json.results[i].poster_path
+								$('#movies-appear-here').append('<img src=' + produce + ' />')
+							}
+						}
+				})})
