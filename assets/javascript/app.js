@@ -14,9 +14,12 @@
 							console.log(json);
 							
 							for(i=0; i<4; i++){
+								
 							if (json.total_results) {
 								var produce = baseimg + json.results[i].poster_path
 								$('#movies-appear-here').append('<img src=' + produce + ' />')
 							}
 						}
 				})})
+
+//==============================================================================================================================
