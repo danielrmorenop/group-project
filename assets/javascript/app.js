@@ -1,23 +1,22 @@
-var genres = ["https://m.media-amazon.com/images/M/MV5BMzg4MDJhMDMtYmJiMS00ZDZmLThmZWUtYTMwZDM1YTc5MWE2XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg","https://m.media-amazon.com/images/M/MV5BZjA3YjdhMWEtYjc2Ni00YzVlLWI0MTUtMGZmNTJjNmU0Yzk2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg","https://m.media-amazon.com/images/M/MV5BMTQ5MjI1OTA2NV5BMl5BanBnXkFtZTgwNjMxMjE3NjE@._V1_SX300.jpg"];
+// cache some shit
+	var api_key = "a97f71ed06e6f46f60b4fad70c2bd407";
 
-//function to display the buttons on the page
+	//function definition
+	$('#add-movie').on("click", function(e){
+ // this gets rid of the warning about using return false
+		e.preventDefault();
 
-$('#add-movie').on("click", function(event){
-  event.preventDefault();
-    //grab value of user input
-  var userInput = $("#genreInput").val("");
+			var year = $('#genreInput').val();
+			var baseimg= "http://image.tmdb.org/t/p/w200//"
 
-  //loop through array
-  for(var i=0; i<genres.length; i++){
-      var movieDiv = $('<div>');
-      movieDiv.addClass('card');
-      movieDiv.css('width','18rem');
-      var image = $('<img>');
-      image.attr('src', genres[i]);
-      movieDiv.append(image);
-
-      $('#movies-appear-here').append(movieDiv);
-  }
-  genres = [];
-
-})
+					$.getJSON("https://api.themoviedb.org/3/discover/movie?primary_release_year="+year+"&sort_by=vote_average.desc&api_key="+api_key,
+							function(json) {
+							console.log(json);
+							
+									for(var i=0;i<3;i++){
+										if (json.total_results) {
+											$('#movies-appear-here').html(
+												'<h2 class="loading"> We found you your poster.</h2><img id="thePoster" src=' + baseimg +
+														json.results[0].poster_path + ' />');
+													} 
+	})});
