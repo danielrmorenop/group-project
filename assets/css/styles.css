@@ -12,7 +12,9 @@ body {
     background-color:black!important;
 }
 
-
+.align-items-center {
+    align-items: center !important;
+}
 
 #resetButton {
     bottom: 5px;
