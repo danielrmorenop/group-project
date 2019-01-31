@@ -3,7 +3,7 @@
 												//      _.-'       '-._      //
 												//    .'               '.    //
 												//   /                   \   //
-												//  |                     |  //
+												//  |      OUR JQUERY     |  //
 												//   \                   /   //
 												//    '-._           _.-'    //
 												//   _..._'.       .'_..._   //
@@ -18,7 +18,10 @@
 												//           '. .'           //
 												//             '             //
 
-// cache some shit
+//--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>
+//--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>
+
+// cache some stuff
 var api_key = "a97f71ed06e6f46f60b4fad70c2bd407";
 //function definition
 $('#add-movie').on("click", function(e){
@@ -52,7 +55,6 @@ $('#add-movie').on("click", function(e){
 									if (json.total_results) {
 										var produce = baseimg + json.results[randNum].poster_path
 										$('#movies-appear-here').append('<img src=' + produce + ' />')
-									/*----------------------------------------*/
 
 									// increase our counter
 									i++;
@@ -61,3 +63,14 @@ $('#add-movie').on("click", function(e){
 							}}
 				})})
 	//==============================================================================================================================
+
+	var clicks = 0;
+
+$('.myClass').click(function() {
+    if (clicks == 0){
+        // first click
+    } else{
+        // second click
+    }
+    ++clicks;
+});
