@@ -30,36 +30,55 @@ $('#add-movie').on("click", function(e){
 
 		var year = $('#genreInput').val();
 		var baseimg= "http://image.tmdb.org/t/p/w200//"
+		var pageNum=1
+		var bigBag=[]
+		for (pageNum=1; pageNum<5; pageNum++){
+			$.getJSON("https://api.themoviedb.org/3/discover/movie?primary_release_year="+year+"&sort_by=vote_average.desc&api_key="+api_key+"&page="+pageNum,
+			function(json) {
+				//console.log(json);
+				//bigBag.push(json)
 
-				$.getJSON("https://api.themoviedb.org/3/discover/movie?primary_release_year="+year+"&sort_by=vote_average.desc&api_key="+api_key,
-					function(json) {
-					console.log(json);
+				json.results.forEach( function(item) { bigBag.push( item ) } )
+
+				console.log(bigBag)
+			})
+		}
+
+	});
+
+				// $.getJSON("https://api.themoviedb.org/3/discover/movie?primary_release_year="+year+"&sort_by=vote_average.desc&api_key="+api_key,
+				// 	function(json) {
+				// 		console.log(json);
 						
-						var i = 0;
-						var randomArr=[]
+				// 		var i = 0;
+				// 		var randomArr=[]
 
-							while( i < 4 ) {
+				// 			while( i < 4 ) {
 
-								var randNum = Math.floor( Math.random() * 19 );
+				// 				var randNum = Math.floor( Math.random() * 19 );
 
-								// ONLY if we are selecting a new random number...
-								if( randomArr.includes( randNum ) === false ) {
+				// 				// ONLY if we are selecting a new random number...
+				// 				if( randomArr.includes( randNum ) === false ) {
 
-									console.log( randNum );
+				// 					console.log( randNum );
 
-									// push number to our checker array
-									randomArr.push( randNum );
-									console.log(randomArr);
+				// 					// push number to our checker array
+				// 					randomArr.push( randNum );
+				// 					console.log(randomArr);
 
-									//make movie poster code
-									if (json.results[randNum].poster_path) {
-										var produce = baseimg + json.results[randNum].poster_path
-										$('#movies-appear-here').append('<div class="movieBlock" style="display:inline-block;" data-title="'+json.results[randNum].title+'"><img src=' + produce + ' /></div>')
+				// 					//make movie poster code
+				// 					if (json.results[randNum].poster_path) {
+				// 						var produce = baseimg + json.results[randNum].poster_path
+				// 						$('#movies-appear-here').append('<div class="movieBlock" style="display:inline-block;" data-title="'+json.results[randNum].title+'"><img src=' + produce + ' /></div>')
 									
-									// increase our counter
-									i++;
+				// 					// increase our counter
+				// 					i++;
 
-								}
-							}}
-				})})
+				// 				}
+				// 			}}
+				// 	}
+				// )
+					
+
+				
 //====================================================================================================================================
