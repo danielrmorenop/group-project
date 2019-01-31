@@ -1,5 +1,19 @@
-.card {
-    float: left;
+body {
+    background-color: black;
+}
+
+.jumbotron
+{
+    background-color: black;
+    color: white;
+}
+
+#navColor{
+    background-color:black!important;
+}
+
+.align-items-center {
+    align-items: center !important;
 }
 
 #resetButton {
