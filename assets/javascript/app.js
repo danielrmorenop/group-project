@@ -36,11 +36,11 @@ $('#add-movie').on("click", function(e){
 					console.log(json);
 						
 						var i = 0;
+						var randomArr=[]
 
 							while( i < 4 ) {
 
 								var randNum = Math.floor( Math.random() * 19 );
-								var randomArr=[]
 
 								// ONLY if we are selecting a new random number...
 								if( randomArr.includes( randNum ) === false ) {
@@ -52,25 +52,14 @@ $('#add-movie').on("click", function(e){
 									console.log(randomArr);
 
 									//make movie poster code
-									if (json.total_results) {
+									if (json.results[randNum].poster_path) {
 										var produce = baseimg + json.results[randNum].poster_path
-										$('#movies-appear-here').append('<img src=' + produce + ' />')
-
+										$('#movies-appear-here').append('<div class="movieBlock" style="display:inline-block;" data-title="'+json.results[randNum].title+'"><img src=' + produce + ' /></div>')
+									
 									// increase our counter
 									i++;
 
 								}
 							}}
 				})})
-	//==============================================================================================================================
-
-	var clicks = 0;
-
-$('.myClass').click(function() {
-    if (clicks == 0){
-        // first click
-    } else{
-        // second click
-    }
-    ++clicks;
-});
+//====================================================================================================================================
