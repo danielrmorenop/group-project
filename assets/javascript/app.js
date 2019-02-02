@@ -23,8 +23,19 @@
 // cache some stuff
 var api_key = "a97f71ed06e6f46f60b4fad70c2bd407";
 //function definition
-$(document).on('click','.movieBlock', function(e){
-	playTrailer ($(this).attr('data-title'))
+$(document).on('click','.movieBlock', function(){
+  console.log("poster click")
+  playTrailer ($(this).attr('data-title'))
+})
+
+$('#trailerModal').on('shown.bs.modal', function(){
+  player.playVideo();
+})
+
+$('#trailerModal').on('hide.bs.modal', function(e){
+  player.stopVideo();
+  player.destroy();
+  console.log("modal hide")
 })
 
 $('#add-movie').on("click", function(e){

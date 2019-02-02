@@ -1,4 +1,7 @@
+var player;
+
 function playTrailer(movieName){
+   $('#player').empty();
     var q = movieName
     $("#movieName").html(movieName);
     var request = gapi.client.youtube.search.list({
