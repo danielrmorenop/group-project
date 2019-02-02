@@ -1,38 +1,52 @@
-<!--********* Target Audience ********* 
-Movie watchers of all ages.
+# Chinese Movieac
+# Project #1 
 
-********* Goal ********* 
-Reccomend movies based on genres that users users can save for later.
+Full Stack Development Program
+University of Miami  2019
+## Team Members 
+ Alex Torres (@AlexTorres1)
 
-********* User Stories ********* 
-As a movie-watcher, I want to find and store movies in a list to watch later. 
+ Brenda Garcia (@)
 
-********* MVP ********* 
-Ability to search through genres and receive reccomendations. 
-+ Ability to save to a list for later (Login with Firebase). 
-+ Play a trailer for the movie reccomendations. 
+ Marisa Timko (@)
 
-   ______________________________
- / \                             \.
-|   |     GIT INSTRUCTIONS       |.
- \_ |                            |.
-    |  1) git checkout master    |.
-    |  2) git pull origin master |.
-    |  3) git checkout "branch"  |.
-    |  4) git merge master       |.
-    |                            |.
-    |  DO YOUR EDITS, SAVE WORK  |.
-    |                            |.
-    |  5) git add *              |.
-    |  6) git commit -m "msg"    |.    
-    |  7) git push               |.
-    |                            |.
-    |     ONLY IF CODE WORKS:    |.
-    |                            |.    
-    |  8) git checkout master    |.
-    |  9) git merge "branch"     |.
-    |                            |.
-    |                            |.
-    |   _________________________|___
-    |  /                            /.
-    \_/____________________________/.
+ Daniel Moreno (@)
+
+
+## Chinese Movieac
+
+### Project Description:
+
+
+
+![screen shot 2018-02-18 at 5 37 00 pm](https://user-images.githubusercontent.com/31390306/36357916-3a79b2cc-14d3-11e8-972e-9662ae1f8334.png)
+
+### Key Elements & Features:
+
+
+ 
+ 
+ ![studdybuddy 3](https://user-images.githubusercontent.com/31390306/36357885-988f34e6-14d2-11e8-9d2a-3f1ee1d4e4e5.gif)
+ 
+## Motivation:
+
+
+## Tech/framework used:
+
+HTML, CSS, JavaScript, JQuery, AJAX
+
+### New Technology used:
+
+TMDb API, YoutTube Data API
+
+## API Reference: 
+
+YouTube
+
+The Movie Database
+
+## Copyright: 
+
+Alex Torres(@AlexTorres1), Brenda Garcia(@zaiverse), Marisa Timko(@mktimmy), Daniel Moreno(@danielrmorenop)
+
+© 2019 All Rights Reserved
