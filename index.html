@@ -7,51 +7,45 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:600,700,800" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> 
     
     <script src="assets/javascript/youtube.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
-    <title>Movie Suggester</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>Chinese Moviac</title>
 </head>
 
 <body>
     <!--Nav-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark" id="navColor">
-            <a class="navbar-brand" href="#">**Logo**</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./facts.html">Facts <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="./features.html">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="./pricing.html">Pricing</a>
                 </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                        
+                    
+            
+<!--Sign in dropdown-->
+    <button type="button" class="btn btn-primary btn-sm" id="signInGoogle"><i class="fab fa-google"></i> Sign in with Google</button>
 
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Sign in
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#" id="signInGoogle">Sign in with Google</a>
-                              <a class="dropdown-item" href="#" id="signInGithub">Sign in with GitHub</a>
-                            </div>
-                          </div>
-
-                    </form>
-            </div>
-            </nav>
-              
+            </form>
+    </div>
+    </nav>
+           
 <!--Jumobtron-->
 
     <div class="jumbotron jumbotron-fluid">
@@ -59,24 +53,33 @@
             <h1 class="display-4 text-center">Chinese Moviac</h1>
             <p class="lead text-center">Your sign in a movie</p>
         </div>
+    </div>
 
-        <form>
-                <div class="form-group">
-                        <div class="container">   
-                                <div class="row">
-                                   <div class="col-sm-3">
 <!--Genre Search-->
-                  <label for="genreInput">Search your movie sign year</label>
-                  <input type="text" class="form-control" id="genreInput" placeholder="What do want to see?">
-                  <button type="submit" id="add-movie" class="btn btn-primary mt-1">Click Me</button>
-                </div>
+        
+    
+        <form>
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-sm"></div>     
+       
+        <div class="col-sm text-center">
+                <label for="genreInput">Search your movie sign year</label>
+                <input type="text" class="form-control" id="genreInput" placeholder="What year were you born?">
+                <button type="button" class="btn btn-outline-light" id="add-movie">Click Me</button>
+            <button type="button" class="btn btn-outline-light" id="resetButton">Reset</button>
+
+
+        </div>
+        
+        <div class="col-sm"></div>
+                </div>  
+            </div>
         </form>
 
 <!--Movies Appear Here-->
-
-<div id="movies-appear-here">
-
-</div>
+<div><h2 id="yearSearched"></h2></div>
+<div id="movies-appear-here"></div>
 
 <!--Genre Buttons-->  
     </div>
@@ -85,10 +88,7 @@
          <div class="row">
             <div class="col-12">
 
-<!--Reset Button-->
-            <button type="button" class="btn btn-primary btn-lg" id="resetButton">Reset</button>
-
-<!-- Modal -->
+<!--Modal-->
   <div class="modal fade" id="trailerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -108,7 +108,5 @@
 
 
     <script src="./assets/javascript/app.js"></script>
-
-    
-</body>
+    </body>
 </html>
