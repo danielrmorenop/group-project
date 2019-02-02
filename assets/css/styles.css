@@ -1,33 +1,36 @@
 body {
-    background-color: black;
+    background-image: url(../images/chinese-moviac.jpg);
+    background-size: cover;
+    color: white;
+    padding: 10px;
+    
 }
 
 .jumbotron
 {
-    background-color: black;
-    color: white;
+   background-color: rgba(0,0,0,0);
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 10px;
+}
+
+form
+{
+    background-color: rgba(0,0,0,0);
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 #navColor{
-    background-color:black!important;
+    background-color: rgba(0,0,0,0)!important;
 }
 
-.align-items-center {
-    align-items: center !important;
-}
-
-#resetButton {
-    bottom: 5px;
-    right: 5px;
-}
-
-.carousel-inner {
-    width: 50%;
-}
 #add-movie{
     margin: 15px;
 }
 
 img {
     margin: 15px;
+}
+
+.containerFeatures {
+    background-color: grey;
 }
