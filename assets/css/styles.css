@@ -1,22 +1,33 @@
-body {
-    background-image: url(../images/chinese-moviac.jpg);
+/*index and general content from all pages*/
+
+html { 
+    background: url(../images/chinese-moviac.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+  }
+
+body {
+    background-color: rgba(0,0,0,0);
     color: white;
     padding: 10px;
+    font-family: 'Chelsea Market', cursive;
     
 }
 
 .jumbotron
 {
    background-color: rgba(0,0,0,0);
-    font-family: 'Nunito Sans', sans-serif;
+   font-family: 'Chelsea Market', cursive;
     padding: 10px;
 }
 
 form
 {
     background-color: rgba(0,0,0,0);
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Chelsea Market', cursive;
+    font-size: 20px;
 }
 
 #navColor{
@@ -35,6 +46,10 @@ img {
     background-color: grey;
 }
 
+#movieSpacing {
+    text-align: center;
+}
+
 /*Pricing*/
 
 #pricingContainer {
@@ -44,14 +59,20 @@ img {
 #dogPricing {
     float: left;
     margin: 15px;
+    background-size: cover;
+    color: black!important;
 }
 
 #horsePricing {
     float: left;
     margin: 15px;
+    background-size: cover;
+    color: black!important;
 }
 
 #dragonPricing {
     float: left;
     margin: 15px;
+    background-size: cover;
+    color: black!important;
 }
