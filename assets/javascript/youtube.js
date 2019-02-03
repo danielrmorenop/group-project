@@ -11,6 +11,7 @@ function playTrailer(movieName){
     });
   
     request.execute(function(response) {
+    console.log(response);
      embedVideo(response.items[0].id.videoId);
     });
 }

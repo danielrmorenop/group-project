@@ -71,7 +71,7 @@ function(json) {
 		//make movie poster code
 		if (json.results[randNum].poster_path) {
 			var produce = baseimg + json.results[randNum].poster_path
-			$('#movies-appear-here').append('<div class="movieBlock" style="display:inline-block;" data-title="'+json.results[randNum].title+'" trailer><img src=' + produce + ' /></div>')
+			$('#movies-appear-here').append('<div class="movieBlock" style="display:inline-block;" data-title="'+json.results[randNum].title+ 'trailer"><img src=' + produce + ' /></div>')
 			// increase our counter
 			i++;
 			}
