@@ -34,3 +34,24 @@ img {
 .containerFeatures {
     background-color: grey;
 }
+
+/*Pricing*/
+
+#pricingContainer {
+    text-align: center;
+}
+
+#dogPricing {
+    float: left;
+    margin: 15px;
+}
+
+#horsePricing {
+    float: left;
+    margin: 15px;
+}
+
+#dragonPricing {
+    float: left;
+    margin: 15px;
+}
