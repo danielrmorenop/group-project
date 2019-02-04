@@ -20,13 +20,28 @@
 
 //--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>
 //--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>
+var database = firebase.database().ref();
+var bigBag=[]
+var URLpart1 = "https://api.themoviedb.org/3/discover/movie?primary_release_year="
+var URLpart2 = "&sort_by=vote_average.desc&api_key="
+var URLpart3 = "&sort_by=popularity.desc"
+
+var baseimg= "http://image.tmdb.org/t/p/w200//"
 
 // cache some stuff
 var api_key = "a97f71ed06e6f46f60b4fad70c2bd407";
 //function definition
 $(document).on('click','.movieBlock', function(){
-  console.log("poster click")
-  playTrailer ($(this).attr('data-title'))
+  var specificMovieTitle = $(this).attr('data-title')
+  playTrailer (specificMovieTitle);
+
+  $('#addToList').on('click', function(specificMovieTitle){
+		var recommendations = database.child("savedMovies");
+
+		recommendations.push({
+			title: specificMovieTitle
+		})
+	})
 })
 
 $('#trailerModal').on('shown.bs.modal', function(){
@@ -44,16 +59,14 @@ $('#add-movie').on("click", function(e){
 e.preventDefault();
 
 var year = $('#genreInput').val();
-var baseimg= "http://image.tmdb.org/t/p/w200//"
-var bigBag=[]
 
 calculateChineseCalender(year);
 
-$.getJSON("https://api.themoviedb.org/3/discover/movie?primary_release_year="+year+"&sort_by=vote_average.desc&api_key="+api_key+"&sort_by=popularity.desc",
+$.getJSON(URLpart1 + year + URLpart2 + api_key + URLpart3,
 
 function(json) {
 
-	json.results.forEach( function(item) { bigBag.push( item ) } )
+	bigBag.push(json)
 
 	console.log(bigBag)
 				
@@ -70,7 +83,8 @@ function(json) {
 
 		//make movie poster code
 		if (json.results[randNum].poster_path) {
-			var produce = baseimg + json.results[randNum].poster_path
+			var produce = baseimg + json.results[randNum].poster_path;
+
 			$('#movies-appear-here').append('<div class="movieBlock" style="display:inline-block;" data-title="'+json.results[randNum].title+ 'trailer"><img src=' + produce + ' /></div>')
 			// increase our counter
 			i++;
@@ -78,6 +92,8 @@ function(json) {
 		}}
 	})
 })
+
+
 
 function calculateChineseCalender(year){
 	//formula for calculating chinese calender animal
