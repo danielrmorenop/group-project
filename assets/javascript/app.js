@@ -79,6 +79,7 @@ function(json) {
 	})
 })
 
+
 function calculateChineseCalender(year){
 	//formula for calculating chinese calender animal
 var userAnimal = year % 12;

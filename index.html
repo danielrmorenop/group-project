@@ -11,7 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> 
-    
+    <link href="assets/css/introjs-dark.css" rel="stylesheet">
+
     <script src="assets/javascript/youtube.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -62,12 +63,18 @@
             <div class="container"> 
                 <div class="row">
                     <div class="col-sm"></div>     
-       
-        <div class="col-sm text-center">
+
+<!--First introJS step-->    
+
+
+        <div class="col-sm text-center" >
                 <label for="genreInput">Search your movie sign year</label>
-                <input type="text" class="form-control" id="genreInput" placeholder="What year were you born?">
-                <button type="button" class="btn btn-outline-light" id="add-movie">Click Me</button>
-            <button type="button" class="btn btn-outline-light" id="resetButton">Reset</button>
+                <input type="text" class="form-control" id="genreInput" placeholder="What year were you born?" data-step="1" data-intro="This is where you search for your movie by your birth year.">
+                <button type="button" class="btn btn-outline-light" id="add-movie" data-step="2" data-intro="TThen click here to search!">Click Me</button>
+            <button type="button" class="btn btn-outline-light" id="resetButton" onClick="window.location.reload()" data-step="3" data-intro="And click me to reset the page.">Reset</button>
+
+
+<br><span><a href="javascript:void(0);" onclick="javascript:introJs().start();">Click here to start site tour!</a></span>
 
 
         </div>
@@ -111,7 +118,7 @@
       </div>
     </div>
   </div>
-
+    <script src="assets/javascript/intro.js"></script>
     <script src="./assets/javascript/app.js"></script>
     </body>
 </html>
