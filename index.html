@@ -82,6 +82,9 @@
 <div><h2 id="yearSearched"></h2></div>
 <div id="movieSpacing"><div id="movies-appear-here"></div></div>
 
+<div><h2>My list: </h2></div>
+<div id = 'movieSpacing'><div id = "listMoviesAppearHere"></div></div>
+
 
 
 
@@ -111,7 +114,18 @@
       </div>
     </div>
   </div>
-
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyBTWNeucxZWEQaMUEV2IHozwk2P_k9n2GM",
+    authDomain: "chinesezodiac-4b7a5.firebaseapp.com",
+    databaseURL: "https://chinesezodiac-4b7a5.firebaseio.com",
+    projectId: "chinesezodiac-4b7a5",
+    storageBucket: "chinesezodiac-4b7a5.appspot.com",
+    messagingSenderId: "864200325647"
+  };
+  firebase.initializeApp(config);
+</script>
     <script src="./assets/javascript/app.js"></script>
     </body>
 </html>
