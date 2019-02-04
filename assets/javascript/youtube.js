@@ -16,7 +16,7 @@ function playTrailer(movieName){
     });
 }
 
-var OAUTH2_CLIENT_ID = 'AIzaSyCW2aE8Cv-LwPp8rwHT0PagtMa2AwWH_gc';
+var OAUTH2_CLIENT_ID = 'AIzaSyD4TfSuvp0CFY83jYNj9Xcl-3AeFsKCEOk';
 var OAUTH2_SCOPES = [
   'https://www.googleapis.com/auth/youtube'
 ];
