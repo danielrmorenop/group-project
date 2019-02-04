@@ -32,6 +32,9 @@ var baseimg= "http://image.tmdb.org/t/p/w200//"
 var api_key = "a97f71ed06e6f46f60b4fad70c2bd407";
 //function definition
 $(document).on('click','.movieBlock', function(){
+	$('#deleteToList').hide();
+	$('#addToList').show();
+
   var specificMovieTitle = $(this).attr('data-title')
   var specificMoviePosterURL = $(this).attr('data-url')
 
@@ -61,12 +64,12 @@ $('#addToList').on('click', function(ev){
 $(document).on("click", ".firebaseMovies", function(){
 	var specificMovieTitlefirebase = $(this).attr('data-title')
 	playTrailer (specificMovieTitlefirebase);
-	$('#addToList').hide()
+	$('#addToList').hide();
 	$('#deleteToList').show();
 })
 
 $('#deleteToList').on("click", function(){
-	
+
 })
 
 $('#trailerModal').on('shown.bs.modal', function(){
