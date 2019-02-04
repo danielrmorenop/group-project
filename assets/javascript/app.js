@@ -20,6 +20,7 @@
 
 //--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>
 //--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>--<>
+var myJSON;
 var database = firebase.database().ref();
 var bigBag=[]
 var URLpart1 = "https://api.themoviedb.org/3/discover/movie?primary_release_year="
@@ -32,6 +33,7 @@ var baseimg= "http://image.tmdb.org/t/p/w200//"
 var api_key = "a97f71ed06e6f46f60b4fad70c2bd407";
 //function definition
 $(document).on('click','.movieBlock', function(){
+	console.log(myJSON);
   var specificMovieTitle = $(this).attr('data-title')
   playTrailer (specificMovieTitle);
 
@@ -65,11 +67,8 @@ calculateChineseCalender(year);
 $.getJSON(URLpart1 + year + URLpart2 + api_key + URLpart3,
 
 function(json) {
-
-	bigBag.push(json)
-
-	console.log(bigBag)
-				
+	var myJSON = json;
+			
 	var i = 0;
 	var randomArr=[]
 	while( i < 4 ) {
