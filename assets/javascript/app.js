@@ -58,6 +58,17 @@ $('#addToList').on('click', function(ev){
 	})
 })
 
+$(document).on("click", ".firebaseMovies", function(){
+	var specificMovieTitlefirebase = $(this).attr('data-title')
+	playTrailer (specificMovieTitlefirebase);
+	$('#addToList').hide()
+	$('#deleteToList').show();
+})
+
+$('#deleteToList').on("click", function(){
+	
+})
+
 $('#trailerModal').on('shown.bs.modal', function(){
   player.playVideo();
 })
@@ -147,7 +158,7 @@ database.child('savedMovies/').on('child_added', function(childAdded){
 	var ListMovies = childAdded.val().url;
 	var ListMoviesTitle = childAdded.val().title;
 	
-	$('#listMoviesAppearHere').append('<div style="display:inline-block;" ><img src = "' + ListMovies + '"/></div>');
+	$('#listMoviesAppearHere').append('<div class="firebaseMovies" style="display:inline-block;" data-title="'+ListMoviesTitle+ 'trailer"><img src = "' + ListMovies + '"/></div>');
 
 })
 

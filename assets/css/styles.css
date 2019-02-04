@@ -16,6 +16,10 @@ body {
     
 }
 
+.myList{
+    text-align: center;
+}
+
 .jumbotron
 {
    background-color: rgba(0,0,0,0);
