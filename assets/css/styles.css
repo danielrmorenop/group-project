@@ -76,3 +76,11 @@ img {
     background-size: cover;
     color: black!important;
 }
+
+/*Facts*/
+#factsContainer {
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
