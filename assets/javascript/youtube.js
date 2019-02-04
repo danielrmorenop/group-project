@@ -41,8 +41,7 @@ function onPlayerReady(event) {
   function embedVideo(videoId)
   {
     player = new YT.Player('player', {
-      height: '390',
-      width: '640',
+      width: '100%',
       videoId: videoId,
       events: {
         'onReady': onPlayerReady
