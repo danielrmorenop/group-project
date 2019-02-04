@@ -106,6 +106,7 @@ $('#add-movie').on("click", function(e){
 
 
 
+
 function calculateChineseCalender(year){
 	//formula for calculating chinese calender animal
 var userAnimal = year % 12;
