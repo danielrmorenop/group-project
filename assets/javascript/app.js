@@ -32,6 +32,9 @@ var baseimg= "http://image.tmdb.org/t/p/w200//"
 var api_key = "a97f71ed06e6f46f60b4fad70c2bd407";
 //function definition
 $(document).on('click','.movieBlock', function(){
+	$('#deleteToList').hide();
+	$('#addToList').show();
+
   var specificMovieTitle = $(this).attr('data-title')
   var specificMoviePosterURL = $(this).attr('data-url')
 
@@ -56,6 +59,17 @@ $('#addToList').on('click', function(ev){
 		title: specificMovieTitle,
 		url: specificMoviePosterURL
 	})
+})
+
+$(document).on("click", ".firebaseMovies", function(){
+	var specificMovieTitlefirebase = $(this).attr('data-title')
+	playTrailer (specificMovieTitlefirebase);
+	$('#addToList').hide();
+	$('#deleteToList').show();
+})
+
+$('#deleteToList').on("click", function(){
+
 })
 
 $('#trailerModal').on('shown.bs.modal', function(){
@@ -148,7 +162,7 @@ database.child('savedMovies/').on('child_added', function(childAdded){
 	var ListMovies = childAdded.val().url;
 	var ListMoviesTitle = childAdded.val().title;
 	
-	$('#listMoviesAppearHere').append('<div style="display:inline-block;" ><img src = "' + ListMovies + '"/></div>');
+	$('#listMoviesAppearHere').append('<div class="firebaseMovies" style="display:inline-block;" data-title="'+ListMoviesTitle+ 'trailer"><img src = "' + ListMovies + '"/></div>');
 
 })
 
