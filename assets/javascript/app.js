@@ -166,3 +166,6 @@ database.child('savedMovies/').on('child_added', function(childAdded){
 
 })
 
+$("#resetButton").on("click", function(){
+    $('#movies-appear-here').empty();
+  });
